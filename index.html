@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculatrice Scientifique</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <main class="unit">
+
+    <!-- Écran -->
+    <section class="unit__screen" aria-label="Écran de la calculatrice">
+      <div class="screen__top-row">
+        <span id="mode-indicator" class="screen__mode">RAD</span>
+        <span id="history-line" class="screen__history"></span>
+      </div>
+      <div id="display" class="screen__display" aria-live="polite">0</div>
+    </section>
+
+    <!-- Panneau des fonctions scientifiques -->
+    <section class="unit__panel" aria-label="Fonctions scientifiques">
+      <button class="key key--fn" data-action="mode">RAD</button>
+      <button class="key key--fn" data-action="fn" data-fn="sin">sin</button>
+      <button class="key key--fn" data-action="fn" data-fn="cos">cos</button>
+      <button class="key key--fn" data-action="fn" data-fn="tan">tan</button>
+      <button class="key key--fn" data-action="clear-mem">mc</button>
+
+      <button class="key key--fn" data-action="const" data-const="pi">π</button>
+      <button class="key key--fn" data-action="fn" data-fn="log">log</button>
+      <button class="key key--fn" data-action="fn" data-fn="ln">ln</button>
+      <button class="key key--fn" data-action="fn" data-fn="sqrt">√</button>
+      <button class="key key--fn" data-action="mem-recall">mr</button>
+
+      <button class="key key--fn" data-action="const" data-const="e">e</button>
+      <button class="key key--fn" data-action="op" data-op="^">xʸ</button>
+      <button class="key key--fn" data-action="fn" data-fn="fact">x!</button>
+      <button class="key key--fn" data-action="op" data-op="%">%</button>
+      <button class="key key--fn" data-action="mem-add">m+</button>
+    </section>
+
+    <!-- Pavé numérique principal -->
+    <section class="unit__keypad" aria-label="Pavé numérique">
+      <button class="key key--utility" data-action="clear-entry">CE</button>
+      <button class="key key--utility" data-action="clear-all">C</button>
+      <button class="key key--utility" data-action="backspace">⌫</button>
+      <button class="key key--op" data-action="op" data-op="/">÷</button>
+
+      <button class="key key--num" data-action="digit" data-digit="7">7</button>
+      <button class="key key--num" data-action="digit" data-digit="8">8</button>
+      <button class="key key--num" data-action="digit" data-digit="9">9</button>
+      <button class="key key--op" data-action="op" data-op="*">×</button>
+
+      <button class="key key--num" data-action="digit" data-digit="4">4</button>
+      <button class="key key--num" data-action="digit" data-digit="5">5</button>
+      <button class="key key--num" data-action="digit" data-digit="6">6</button>
+      <button class="key key--op" data-action="op" data-op="-">−</button>
+
+      <button class="key key--num" data-action="digit" data-digit="1">1</button>
+      <button class="key key--num" data-action="digit" data-digit="2">2</button>
+      <button class="key key--num" data-action="digit" data-digit="3">3</button>
+      <button class="key key--op" data-action="op" data-op="+">+</button>
+
+      <button class="key key--paren" data-action="paren" data-paren="(">(</button>
+      <button class="key key--num" data-action="digit" data-digit="0">0</button>
+      <button class="key key--num" data-action="decimal">,</button>
+      <button class="key key--paren" data-action="paren" data-paren=")">)</button>
+
+      <button class="key key--equals" data-action="equals">=</button>
+    </section>
+
+  </main>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
